@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { FaReact, FaJs, FaHtml5, FaCss3Alt, FaBootstrap, FaPhp, FaLaravel, FaDatabase } from 'react-icons/fa';
+import React from 'react';
+import { FaReact, FaJs, FaHtml5, FaCss3Alt, FaBootstrap, FaPhp, FaLaravel} from 'react-icons/fa';
 import { SiNextdotjs, SiTailwindcss, SiMysql } from 'react-icons/si';
 import { MdPalette } from 'react-icons/md';
 import '../App.css';
