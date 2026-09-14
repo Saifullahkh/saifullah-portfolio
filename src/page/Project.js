@@ -1,114 +1,100 @@
 import React from 'react';
-import '../App.css';
+import { FiGlobe, FiArrowRight } from 'react-icons/fi';
 import { projects } from '../data/data';
-import Slider from "react-slick";
-import { FiArrowRight, FiGlobe } from 'react-icons/fi';
+import '../App.css';
 
 function Project() {
-
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 700,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 4000,
-    arrows: false,
-    pauseOnHover: true,
-    cssEase: "ease-in-out",
-    responsive: [
-      {
-        breakpoint: 1100,
-        settings: {
-          slidesToShow: 2
-        }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1
-        }
-      }
-    ]
-  };
-
   return (
-    <section className="project-section py-5" id="project">
-      <div className="project-bg-shape"></div>
+    <section className="projects-page-wrapper py-5">
+      <div className="container py-4">
 
-      <div className="container py-5">
-        {/* Heading */}
-        <div className="row mb-5 align-items-end">
-          <div className="col-md-8">
-            <h6 className="text-teal fw-bold text-uppercase mb-2" style={{ letterSpacing: '3px' }}>
-              My Works
-            </h6>
-            <h2 className="display-5 fw-bold text-dark">
-              Crafting Digital <span className="text-teal">Experiences</span>
-            </h2>
-          </div>
-
-          <div className="col-md-4 text-md-end d-none d-md-block">
-            <p className="text-muted small">
-              Explore my latest projects built with precision and modern tech stacks.
-            </p>
-          </div>
+        {/* Title Block */}
+        <div className="text-center mb-5">
+          <span className="badge-tech mb-2">Portfolio</span>
+          <h2 className="display-5 fw-bold text-dark">My <span className="text-teal">Creations</span></h2>
+          <div className="title-line mx-auto"></div>
+          <p className="text-muted mt-3 max-width-xs mx-auto">
+            Explore my compilation of websites, dashboards, and e-commerce platforms.
+          </p>
         </div>
 
-        {/* SLIDER */}
-        <div className="slider-wrapper">
-          <Slider {...settings} className="custom-slider">
-            {projects.map((project) => (
-              <div key={project.id} className="slide-item">
-                <div className="glass-project-card">
-                  
-                  <div className="card-image-wrapper">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="card-img-main"
-                    />
-                  </div>
 
-                  <div className="card-content-wrapper p-4">
-                    <div className="d-flex justify-content-between align-items-start mb-3">
-                      <h4 className="fw-bold project-title m-0">
-                        {project.title}
-                      </h4>
-
-                      <a
-                        href={project.liveDemo}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="link-circle"
-                      >
-                        <FiGlobe />
-                      </a>
+        {/* Results grid */}
+        {projects.length > 0 ? (
+          <div className="d-flex flex-column gap-5 py-4">
+            {projects.map((project, idx) => (
+              <div key={project.id} className="project-row-wrapper">
+                <div className={`row g-4 g-lg-5 align-items-center ${idx % 2 !== 0 ? 'flex-lg-row-reverse' : ''}`}>
+                  {/* Left Column: Image wrapper */}
+                  <div className="col-lg-6">
+                    <div className="project-image-box position-relative overflow-hidden rounded-4 shadow-lg border border-light-subtle" style={{ height: '320px' }}>
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-100 h-100 object-fit-cover transition-all"
+                      />
+                      <div className="project-category-badge bg-teal text-white px-3 py-1 rounded-pill position-absolute top-3 end-3 small shadow">
+                        {project.category}
+                      </div>
                     </div>
-
-                    <p className="project-desc-text text-muted">
-                      {project.description.substring(0, 100)}...
-                    </p>
-
-                    <hr className="my-4 opacity-25" />
-
-                    <a
-                      href={project.liveDemo}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="btn-modern-link"
-                    >
-                      Explore Project
-                      <FiArrowRight className="ms-2 arrow-icon" />
-                    </a>
                   </div>
 
+                  {/* Right Column: Project details */}
+                  <div className="col-lg-6">
+                    <div className="portfolio-details-card position-relative p-2 p-lg-4">
+                      {/* Sub-label */}
+                      <span className="badge-tech px-2 py-1 mb-2 d-inline-block text-uppercase letter-spacing-1 small">Project {idx + 1}</span>
+
+                      <h3 className="fw-bold project-title-highlight mb-3 text-dark">{project.title}</h3>
+
+                      {/* Tech tags list */}
+                      <div className="d-flex flex-wrap gap-2 mb-4">
+                        {project.tags && project.tags.map((t, tIdx) => (
+                          <span className="badge-tech fw-bold px-2 py-1 rounded-pill small" key={tIdx} style={{ fontSize: '0.75rem' }}>
+                            {t}
+                          </span>
+                        ))}
+                      </div>
+
+                      <p className="project-desc-text text-muted mb-4" style={{ lineHeight: '1.7', fontSize: '0.95rem' }}>
+                        {project.description}
+                      </p>
+
+                      {/* Bottom CTA Actions */}
+                      <div className="d-flex align-items-center gap-3 pt-3 border-top">
+                        <a
+                          href={project.liveDemo}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="btn-send-main px-4 py-2 text-white text-decoration-none d-inline-flex align-items-center"
+                          style={{ fontSize: '0.9rem' }}
+                        >
+                          Launch Demo
+                          <FiArrowRight className="ms-2" />
+                        </a>
+
+                        <a
+                          href={project.liveDemo}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="link-circle shadow-sm"
+                          title="Open Demo Website"
+                        >
+                          <FiGlobe />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}
-          </Slider>
-        </div>
+          </div>
+        ) : (
+          <div className="text-center py-5">
+            <h4 className="text-muted">No projects found.</h4>
+            <p className="text-secondary small">Try widening your search inputs or categories tab filter.</p>
+          </div>
+        )}
 
       </div>
     </section>

@@ -7,18 +7,18 @@ function SocialIcons() {
     { id: 1, icon: <FaLinkedinIn />, link: "https://www.linkedin.com/in/saifullahkh/", name: "LinkedIn" },
     { id: 2, icon: <FaGithub />, link: "https://github.com/saifullahkh", name: "GitHub" },
     { id: 3, icon: <FaFacebookF />, link: "#", name: "Facebook" },
-    { id: 4, icon: <FaInstagram />, link: "#", name: "Instagram" },
+    { id: 4, icon: <FaInstagram />, link: "https://www.instagram.com/saifullahkh484?igsi=eHE3OWRkbjAwcXlp", name: "Instagram" },
   ];
 
   return (
     <div className="social-container d-flex gap-3 align-items-center">
       {socials.map((social) => (
-        <a 
+        <a
           key={social.id}
-          href={social.link} 
-          className="social-icon-wrapper" 
+          href={social.link}
+          className="social-icon-wrapper"
           aria-label={social.name}
-          target="_blank" 
+          target="_blank"
           rel="noopener noreferrer"
         >
           <div className="icon-box">
