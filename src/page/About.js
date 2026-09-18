@@ -3,29 +3,7 @@ import { FiBriefcase, FiBookOpen, FiStar, FiHeart, FiCpu } from "react-icons/fi"
 import "../App.css";
 
 function About() {
-  const experiences = [
-    {
-      role: "React.js Developer",
-      company: "Contract / Freelance Projects",
-      years: "2025 - Present",
-      description: "Engineered high-performance Single Page Applications (SPAs) using React.js. Created dynamic frontends with state management, react hooks, and seamless integrations of RESTful services."
-    },
-    {
-      role: "Frontend Web Apprentice",
-      company: "Self-Project Implementations",
-      years: "2024 - 2025",
-      description: "Crafted 20+ applications range from travel guides and e-commerce stores to admin analytical dashboards. Developed modular styled systems and robust responsive UIs using Bootstrap and Tailwind."
-    }
-  ];
 
-  const education = [
-    {
-      degree: "Academic Studies / Specialization in IT",
-      institution: "Modern Computing Track & Online Certifications",
-      years: "2023 - 2024",
-      description: "Learned deep fundamentals of core software engineering, data structures, UI methodologies, Javascript modules, package managers, and component architectures."
-    }
-  ];
 
   const values = [
     {

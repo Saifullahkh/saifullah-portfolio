@@ -76,12 +76,12 @@ function Home() {
               <div className="d-flex flex-column flex-sm-row align-items-sm-center gap-4 mt-5">
                 <SocialIcons />
                 <div className="divider d-none d-sm-block"></div>
-                <a href="#" download className="btn-download-wrapper text-decoration-none">
+                <button onClick={() => alert("CV Download link clicked")} className="btn-download-wrapper text-decoration-none border-0">
                   <span className="btn-download-text">Download CV</span>
                   <span className="btn-download-icon">
                     <FiDownload />
                   </span>
-                </a>
+                </button>
               </div>
             </div>
 
