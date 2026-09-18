@@ -11,7 +11,7 @@ export const projects = [
         title: "Travel Website",
         description: "A captivating travel website offering destination guides, tour packages, booking services, and travel tips. Designed to inspire adventures, simplify planning, and help users explore the world with ease.",
         image: "https://images.unsplash.com/photo-1522199710521-72d69614c702?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTB8fHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D",
-        liveDemo: "https://saifullah-travel-website.vercel.app/",
+        liveDemo: "https://saifullahkh-travel-website.vercel.app/",
         category: "Websites",
         tags: ["HTML5", "CSS3", "Bootstrap", "React JS"]
     },
