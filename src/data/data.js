@@ -4,7 +4,7 @@ import colorgenerator from '../assets/color-generator.jfif'
 import wattin from '../assets/wattin.jfif'
 import tasbeeh from '../assets/tasbeeh.jfif'
 import kidszone from '../assets/kidszone.png'
-import blog from '../assets/blog.png'
+import blog from '../assets/blog12.png'
 
 export const projects = [
     {
