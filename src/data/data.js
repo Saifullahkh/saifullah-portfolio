@@ -4,6 +4,7 @@ import colorgenerator from '../assets/color-generator.jfif'
 import wattin from '../assets/wattin.jfif'
 import tasbeeh from '../assets/tasbeeh.jfif'
 import kidszone from '../assets/kidszone.png'
+import blog from '../assets/blog.png'
 
 export const projects = [
     {
@@ -91,20 +92,40 @@ export const projects = [
         ]
     },
     {
-    id: 8,
-    title: "KidsZone E-Commerce Store",
-    description: "A modern and responsive e-commerce platform built for KidsZone, featuring a playful and user-friendly shopping experience for kids' clothing, toys, accessories, and educational products. The platform includes product browsing, category filtering, product details, shopping cart, secure checkout, user account management, and a comprehensive admin dashboard for managing products, orders, customers, categories, and store operations.",
-    image: kidszone,
-    liveDemo: "https://github.com/Saifullahkh/KidsZone",
-    category: "E-Commerce",
-    tags: [
-        "Laravel",
-        "HTML/CSS",
-        "MySQL",
-        "Bootstrap",
-        "Admin Dashboard",
-        "Responsive Design"
-    ]
-}
+        id: 9,
+        title: "KidsZone E-Commerce Store",
+        description: "A modern and responsive e-commerce platform built for KidsZone, featuring a playful and user-friendly shopping experience for kids' clothing, toys, accessories, and educational products. The platform includes product browsing, category filtering, product details, shopping cart, secure checkout, user account management, and a comprehensive admin dashboard for managing products, orders, customers, categories, and store operations.",
+        image: kidszone,
+        liveDemo: "https://github.com/Saifullahkh/KidsZone",
+        category: "E-Commerce",
+        tags: [
+            "Laravel",
+            "HTML/CSS",
+            "MySQL",
+            "Bootstrap",
+            "Admin Dashboard",
+            "Responsive Design"
+        ]
+    },
+    {
+        id: 10,
+        title: "BlogCraft - Modern Blogging Platform",
+        description: "A modern, responsive, and full-stack blogging platform built with Laravel, offering a clean and engaging reading experience. BlogCraft features dynamic blog posts, category filtering, article search, detailed blog pages, user authentication, comments, and profile management. The platform also includes an AI-powered chatbot integrated with n8n and Google Gemini to help visitors discover relevant articles and tutorials, along with a comprehensive admin dashboard for managing posts, categories, users, comments, and website settings.",
+        image: blogcraft,
+        liveDemo: "https://github.com/Saifullahkh/blogcraft",
+        category: "Blog Website",
+        tags: [
+            "Laravel",
+            "PHP",
+            "MySQL",
+            "Tailwind CSS",
+            "JavaScript",
+            "n8n",
+            "Google Gemini AI",
+            "AI Chatbot",
+            "Admin Dashboard",
+            "Responsive Design"
+        ]
+    },
     
 ]
