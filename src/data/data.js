@@ -111,7 +111,7 @@ export const projects = [
         id: 10,
         title: "BlogCraft - Modern Blogging Platform",
         description: "A modern, responsive, and full-stack blogging platform built with Laravel, offering a clean and engaging reading experience. BlogCraft features dynamic blog posts, category filtering, article search, detailed blog pages, user authentication, comments, and profile management. The platform also includes an AI-powered chatbot integrated with n8n and Google Gemini to help visitors discover relevant articles and tutorials, along with a comprehensive admin dashboard for managing posts, categories, users, comments, and website settings.",
-        image: blogcraft,
+        image: blog,
         liveDemo: "https://github.com/Saifullahkh/blogcraft",
         category: "Blog Website",
         tags: [
